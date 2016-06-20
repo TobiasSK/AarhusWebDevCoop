@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+	
+	<div class="well well-1g">
+	<h4>Latest projects added </h4>
+@{
+	var selection = CurrentPage.Site().FirstChild("projectMain").Children.Where("Visible").OrderBy("CreateDate desc").Take(5);
+}
+<select>
+<ul>
+	@foreach(var item in selection){
+		<option>
+		<li>
+			
+			<a href="@item.Url">@item.Name</a>
+		</li>
+			</option>
+	}
+	
+</ul>
+
+</select>
+	</div>

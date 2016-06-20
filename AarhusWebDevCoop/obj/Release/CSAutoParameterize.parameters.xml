@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="umbracoDbDSN-Web.config Connection String" description="umbracoDbDSN Connection String used in web.config by the application to access the database." defaultValue="Server=TOBIAS-LAPTOP;Database=AarhusWebDevCoop db;Integrated Security=true" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Tobias\\Desktop\\Git\ project\\AarhusWebDevCoop\\source\\AarhusWebDevCoop\\AarhusWebDevCoop\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='umbracoDbDSN']/@connectionString" />
+  </parameter>
+</parameters>

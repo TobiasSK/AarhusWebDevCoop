@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+ Layout = "master.cshtml";
+}
+ <h3 class="well well-lg">@Umbraco.Field("titleInitiated")</h3>
+
+
+@{
+ var selection = CurrentPage.Site().FirstChild("projectMain").Children("projectItem").Where("Visible && status.Contains(\"1007\")","sas");
+}
+<ul class="list-group">
+ @foreach(var item in selection){
+  <li class="list-group-item">
+   <a href="@item.Url">@item.Name</a>
+  </li>
+ }
+</ul>
